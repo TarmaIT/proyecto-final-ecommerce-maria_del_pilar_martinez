@@ -1,0 +1,248 @@
+* {
+  margin: 0;
+  padding: 0;
+
+}
+
+.direccion {
+  display: flex;
+  padding: 20px;
+  background-color: black;
+  color: gray;
+}
+
+.socialnetwork {
+  display: flex;
+  gap: 15px;
+  margin-left: 35%;
+  flex-wrap: wrap;
+}
+
+.top-nav {
+  display: flex;
+  margin: 0px;
+  background-color: white;
+  flex-wrap: wrap;
+}
+
+.top {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+  margin: 30px;
+  margin-left: 60px;
+  font-size: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  flex-wrap: wrap;
+
+}
+
+.top a {
+  text-decoration: none;
+}
+
+.banner img {
+  margin: 0%;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+#texto-banner {
+  position: absolute;
+  /* Coloca el texto sobre la imagen */
+  top: 50%;
+  /* Centrado vertical */
+  left: 50%;
+  /* Centrado horizontal */
+  transform: translate(-50%, -50%);
+  color: red;
+  /* Color del texto */
+  font-size: 50px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px black;
+  /* Para que se lea bien sobre la imagen */
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+#acerca {
+  display: flex;
+  background-color: #E3F0EB;
+  height: auto;
+  font-family: "Montserrat", sans-serif;
+  gap: 10px;
+  align-items: center;
+  color: #2C2827;
+}
+
+#servicios {
+  display: flex;
+  gap: 60px;
+  padding-left: 60px;
+  background-color: #696B63;
+  flex-wrap: wrap;
+}
+
+#servicios button {
+  background-color: #4CAF50;
+  /* Color de fondo */
+  color: white;
+  /* Color del texto */
+  border: none;
+  /* Quita el borde feo por defecto */
+  padding: 12px 24px;
+  /* Espaciado interno (alto y ancho) */
+  border-radius: 8px;
+  /* Bordes redondeados */
+  font-size: 16px;
+  /* Tamaño del texto */
+  font-weight: 600;
+  /* Grosor del texto */
+  cursor: pointer;
+  /* Cambia el cursor al pasar por encima */
+  transition: all 0.3s ease;
+  /* Suaviza los cambios al hacer hover */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* Sombra ligera */
+  height: 50px;
+  margin-top: 10%;
+  margin-left: 5%;
+
+}
+
+.lista-servicios {
+  display: flex;
+  flex-direction: column;
+  margin-left: 50px;
+  margin-top: 20px;
+  list-style: none;
+  gap: 15px;
+  color: white;
+}
+
+.lista-servicios h2 {
+  color: red;
+  font-size: 35px;
+  text-shadow: 2px 2px 4px black;
+  font-weight: bold;
+}
+
+#objetivos {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: #ABD0BC;
+  padding-bottom: 40px;
+}
+
+.marcas {
+  display: flex;
+  gap: 180px;
+  width: 50px;
+  height: 50px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 70px;
+
+
+
+}
+
+#objetivos h2 {
+  text-align: center;
+  color: black;
+  font-size: 35px;
+  text-shadow: 2px 2px 4px black;
+  font-weight: bold;
+}
+
+#objetivos p {
+  text-align: center;
+
+}
+
+.footer {
+  display: flex;
+  gap: 3rem;
+  background-color: black;
+  padding-top: 70px;
+  padding-bottom: 100px;
+
+}
+
+#mapa {
+  width: 400px;
+  height: 400px;
+  margin-left: 20px;
+}
+
+.contacto-pie {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  color: white;
+  text-align: left;
+ 
+}
+
+
+
+
+.contacto h2 {
+  text-align: center;
+  color: white
+}
+
+.contacto label {
+  display: block;
+  margin-top: 10px;
+  color: white;
+  font-weight: bold;
+}
+
+.contacto input,
+textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.buttons {
+
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+}
+
+button[type="submit"] {
+  background-color: #28a745;
+}
+
+button[type="reset"] {
+  background-color: #dc3545;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.web {
+  color: white;
+  font-size: 15px;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: rgb(50, 48, 48);
+  text-align: center;
+ padding: 50px;
+}
