@@ -4,8 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  
   <title>Isosoftech</title>
-  <link rel="stylesheet" href="./CSS/style.css">
+   <link rel="stylesheet" href="./CSS/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
     integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -27,18 +29,32 @@
         <i class="fa-brands fa-instagram" style="color: red;"></i>
       </div>
     </div>
-    <div class="top-nav">
-      <a href="index.html"><img src="/imagenes/logo_mail.png" alt="banner"></a>
-      <nav>
-        <ul class="top">
-          <a href="index.html">
-            <li>Inicio</li>
-          </a>
-          <li><a href="#servicios">Servicios</a></li>
-          <li>Projectos</li>
-          <li>Contacto</li>
-        </ul>
-      </nav>
+   
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html"><img src="/imagenes/logo_mail.png" alt="banner"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="#">Nosotros</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Nuestros servicios</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contacto</a>
+        </li>
+      
+      </ul>
+     
+    </div>
+  </div>
+</nav>
+
+
     </div>
     <div class="banner">
       <img src="/imagenes/laptop-notebook-keyboard-technology-banner-black-625552-pxhere.com.jpg">
@@ -114,6 +130,98 @@
       <img src="/imagenes/hitachi.png" alt="">
     </div>
 
+     <section id="cards">
+<div class="card" style="width: 18rem;">
+  <img src="./imagenes/pexels-proxyclick-2451566.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Mantenimientos mensuales</h5>
+    <p class="card-text">
+
+Nuestros planes están diseñados para Pymes que necesitan soporte informático confiable, estable y con disponibilidad diaria.</p>
+    <a href="#" class="btn btn-primary">Contratar</a>
+  </div>
+      </div>
+
+      <div class="card" style="width: 18rem;">
+  <img src="./imagenes/networkservice.jpg" class="card-img-top" alt="network">
+  <div class="card-body">
+    <h5 class="card-title">Redes y Conectividad</h5>
+    <p class="card-text">Cableado estructurado
+
+Configuración de routers, switches y Wi-Fi, Optimización de velocidad y estabilidad, Segmentación de red para mayor seguridad</p>
+    <a href="#" class="btn btn-primary">Contratar</a>
+  </div>
+</div>
+
+<div class="card" style="width: 18rem;">
+  <img src="./imagenes/seguriadadinformatica.jpg" class="card-img-top" alt="seguridad">
+  <div class="card-body">
+    <h5 class="card-title">Seguridad Informática para Empresas</h5>
+    <p class="card-text">Protegemos la información y los dispositivos de tu empresa:
+Antivirus y antimalware corporativo, Hardening y actualizaciones de seguridad, Configuración de Firewall, Copias de seguridad (backup local y en la nube)</p>
+    <a href="#" class="btn btn-primary">Contratar</a>
+  </div>
+</div>
+
+<div class="card" style="width: 18rem;">
+  <img src="./imagenes/helpdesk.jpg" class="card-img-top" alt="help_desk">
+  <div class="card-body">
+    <h5 class="card-title">Soporte Técnico y Help Desk</h5>
+    <p class="card-text">Atención rápida y confiable para resolver problemas de hardware, software, red, accesos, correo electrónico y sistemas:
+     Soporte remoto y presencial, Atención por WhatsApp y ticketing, Resolución de incidentes diarios, Configuración de PCs, notebooks e impresoras</p>
+    <a href="#" class="btn btn-primary">Contratar</a>
+  </div>
+</div>
+
+<div class="card" style="width: 18rem;">
+  <img src="./imagenes/pyme.jpg" class="card-img-top" alt="startup">
+  <div class="card-body">
+    <h5 class="card-title">Soluciones Informáticas para Pymes y Oficinas</h5>
+    <p class="card-text">Brindamos servicios de soporte y mantenimiento informático diseñados especialmente para pequeñas y medianas empresas. Nos enfocamos en garantizar la continuidad operativa de tu negocio mediante una infraestructura estable, segura y siempre disponible.</p>
+    <a href="#" class="btn btn-primary">Contratar</a>
+  </div>
+</div>
+     </section>
+
+     <section id="planes">
+      <div class="container text-center">
+  <div class="row align-items-start">
+    <div class="col 4">
+        <ul class="col-ul">
+  <li class="list-group-item"><h3>Plan Básico – USD 20 por máquina / mes</h3></li>
+  <li class="list-group-item">- Mantenimiento mensual preventivo</li>
+  <li class="list-group-item"> - Actualizaciones</li>
+  <li class="list-group-item"> - Antivirus monitoreado</li>
+  <li class="list-group-item">- 2 tickets de soporte por máquina</li>
+  <li class="list-group-item">- Reporte mensual</li>
+</ul>
+    </div>
+  <div class="col 4">
+        <ul class="col-ul">
+  <li class="list-group-item"><h3>Plan Estándar – USD 25 por máquina / mes</h3></li>
+  <li class="list-group-item">- Todo lo del Básico</li>
+  <li class="list-group-item"> - Soporte remoto ilimitado</li>
+  <li class="list-group-item"> - 1 visita presencial mensual</li>
+  <li class="list-group-item">- Gestión de correo (365 / Gmail)</li>
+  <li class="list-group-item">- Monitoreo básico de equipos</li>
+</ul>
+    </div>
+      <div class="col 4">
+        <ul class="col-ul">
+  <li class="list-group-item"><h3>Plan Full Empresa – USD 30 por máquina / mes</h3></li>
+  <li class="list-group-item">- Todo lo del Estándar</li>
+  <li class="list-group-item"> - Monitoreo 24/7</li>
+  <li class="list-group-item"> -Backup administrado</li>
+  <li class="list-group-item">- Seguridad avanzada</li>
+  <li class="list-group-item">- Optimización prioritaria</li>
+  <li class="list-group-item">- Revisión de red completa</li>
+</ul>
+    </div>
+    
+</div>
+
+
+     </section>
 
   </main>
 
@@ -149,5 +257,7 @@
       <h2><i class="fa-solid fa-location-dot"></i>Chañar 3080, Villa Luzuriaga CP1754</h2>
     </div>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  </body>
   <div class="web">Web Master Maria del Pilar Martinez -- Marca registrada -- Isosoftech</div>
 </html>
