@@ -61,15 +61,7 @@
   flex-wrap: wrap;
 }
 
-#acerca {
-  display: flex;
-  
-  height: auto;
-  font-family: "Montserrat", sans-serif;
-  gap: 10px;
-  align-items: center;
-  color: #2C2827;
-}
+
 .col-ul{
   border: 2px solid gainsboro;
   background-color: gray;
