@@ -28,7 +28,27 @@ const servicios = [
 ]
 
 
+function CopiaServicios(lista){
+return [...lista];
 
+}
+
+function insertarServicios(){
+ const listaServicios=CopiaServicios(servicios);
+ const contenedorServicios= document.querySelector("#servicios .contenedorServicios");
+ console.log(contenedorServicios);
+ for(c=0; c < listaServicios.length ;c++){
+    const servicioActual=listaServicios(c);
+
+ }
+
+};
+
+insertarServicios();
+
+
+
+/*
 function mostarServicios(catalogo, titulo){
     
     console.log(`\n ----- ${titulo} ----`);
@@ -56,7 +76,7 @@ function crearServicio(idser, nombreser, descripcionser, precioser){
 
 mostarServicios(crearServicio (5, "Retiro y entrega de equipo", "Retirar y entragar equipo a domicilio", 30.00), "Servicio nuevo");
      
-
+*/
 
 
 
