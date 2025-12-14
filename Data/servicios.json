@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "nombre": "Mantenimientos mensuales",
+    "img": "./imagenes/pexels-proxyclick-2451566.jpg",
+    "descripcion": "Nuestros planes están diseñados para Pymes que necesitan soporte informático confiable, estable y con disponibilidad diaria.",
+    "precio": 50.00
+  },
+  {
+    "id": 2,
+    "nombre": "Redes y conectividad",
+    "img": "./imagenes/networkservice.jpg",
+    "descripcion": "Configuración de routers, switches y Wi-Fi, Optimización de velocidad y estabilidad, Segmentación de red para mayor seguridad",
+    "precio": 60.00
+  },
+  {
+    "id": 3,
+    "nombre": "Seguridad informática",
+    "img": "./imagenes/seguriadadinformatica.jpg",
+    "descripcion": "Antivirus y antimalware corporativo, Hardening y actualizaciones de seguridad, Configuración de Firewall, Copias de seguridad",
+    "precio": 100.00
+  },
+  {
+    "id": 4,
+    "nombre": "Soporte técnico",
+    "img": "./imagenes/helpdesk.jpg",
+    "descripcion": "Soporte remoto y presencial, atención por WhatsApp y ticketing",
+    "precio": 30.00
+  }
+]
