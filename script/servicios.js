@@ -24,7 +24,7 @@ function insertarServicios(servicios) {
 
   for (const { id, nombre, img, descripcion, precio } of listaServicios) {
     const nuevoElemento = document.createElement("div");
-   nuevoElemento.className = "card col-12 col-sm-6 col-lg-4";
+    nuevoElemento.className = "card col-12 col-sm-6 col-lg-4";
 
     nuevoElemento.innerHTML = `
       <img src="${img}" class="card-img-top" alt="${nombre}">
@@ -32,22 +32,27 @@ function insertarServicios(servicios) {
         <h5 class="card-title">${nombre}</h5>
 
         <p>
-          <a href="#." class="link-opacity-10-hover"
-             data-descripcion="${descripcion}">
-             Ver descripcion
+      
+          <a href="#." class="link-descripcion link-opacity-10-hover"
+          data-descripcion="${descripcion}">
+          Ver descripcion
           </a>
+
+
+
         </p>
 
         <div class="descripcion"></div>
 
         <p class="card-text">${precio}.00 USD/U</p>
 
-        <a href="#" class="btn btn-primary"
-           data-id="${id}"
-           data-nombre="${nombre}"
-           data-precio="${precio}">
-           Agregar al carrito
-        </a>
+        <button class="btn btn-primary agregar-carrito"
+         data-id="${id}"
+         data-nombre="${nombre}"
+         data-precio="${precio}">
+         Agregar al carrito
+         </button>
+
       </div>
     `;
 
@@ -59,8 +64,10 @@ function insertarServicios(servicios) {
 // EVENTOS
 // ============================
 
-function mostrarDescripcion(e) {
-  if (e.target.tagName !== "A") return;
+  function mostrarDescripcion(e) {
+  if (!e.target.classList.contains("link-descripcion")) return;
+      e.preventDefault();
+
 
   const link = e.target;
   const descripcion = link.dataset.descripcion;
@@ -79,10 +86,7 @@ function mostrarDescripcion(e) {
 }
 
 function agregarAlCarrito(e) {
-  // Solo si se hace click en "Agregar al carrito"
-  if (!e.target.classList.contains("btn-primary")) return;
-
-  e.preventDefault();
+  if (!e.target.classList.contains("agregar-carrito")) return;
 
   const boton = e.target;
 
@@ -140,9 +144,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const contenedorServicios = document.querySelector("#servicios-card .contenedorServicios");
   contenedorServicios.addEventListener("click", mostrarDescripcion);
-contenedorServicios.addEventListener("click", agregarAlCarrito);
+  contenedorServicios.addEventListener("click", agregarAlCarrito);
 
-mostrarCarrito();
+  mostrarCarrito();
 
 });
 document.addEventListener("click", (e) => {
