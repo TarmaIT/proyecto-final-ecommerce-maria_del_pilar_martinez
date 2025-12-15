@@ -1,18 +1,23 @@
 
 // ============================
 // CARRITO
-// ============================
+// ===========================
 
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+function CopiaServicios(lista) {
+  return [...lista];
+}
+
+
+
+
+
 
 
 // ============================
 // FUNCIONES
 // ============================
-
-function CopiaServicios(lista) {
-  return [...lista];
-}
 
 function insertarServicios(servicios) {
   const listaServicios = CopiaServicios(servicios);
@@ -59,6 +64,10 @@ function insertarServicios(servicios) {
     contenedorServicios.appendChild(nuevoElemento);
   }
 }
+function guardarCarrito() {
+  localStorage.setItem("carrito", JSON.stringify(carrito));
+}
+
 
 // ============================
 // EVENTOS
@@ -90,16 +99,28 @@ function agregarAlCarrito(e) {
 
   const boton = e.target;
 
-  const servicio = {
-    id: boton.dataset.id,
-    nombre: boton.dataset.nombre,
-    precio: parseFloat(boton.dataset.precio),
-  };
+  const id = boton.dataset.id;
+  const nombre = boton.dataset.nombre;
+  const precio = Number(boton.dataset.precio);
 
-  carrito.push(servicio);
+  const servicioExistente = carrito.find(item => item.id === id);
+
+  if (servicioExistente) {
+    servicioExistente.cantidad++;
+  } else {
+    carrito.push({
+      id,
+      nombre,
+      precio,
+      cantidad: 1
+    });
+  }
+console.log(carrito);
   guardarCarrito();
   mostrarCarrito();
 }
+
+
 
 function mostrarCarrito() {
   const lista = document.getElementById("listaCarrito");
@@ -111,13 +132,14 @@ function mostrarCarrito() {
   let total = 0;
 
   carrito.forEach((servicio, index) => {
-    total += servicio.precio;
+    total += servicio.precio * servicio.cantidad;
 
     const li = document.createElement("li");
     li.className = "list-group-item d-flex justify-content-between align-items-center";
 
     li.innerHTML = `
-      ${servicio.nombre} - $${servicio.precio}
+      ${servicio.nombre} x ${servicio.cantidad}
+      <span>$${servicio.precio * servicio.cantidad}</span>
       <button class="btn btn-sm btn-danger" data-index="${index}">X</button>
     `;
 
@@ -127,9 +149,6 @@ function mostrarCarrito() {
   totalSpan.textContent = total;
 }
 
-function guardarCarrito() {
-  localStorage.setItem("carrito", JSON.stringify(carrito));
-}
 
 
 // ============================
@@ -146,14 +165,24 @@ document.addEventListener("DOMContentLoaded", () => {
   contenedorServicios.addEventListener("click", mostrarDescripcion);
   contenedorServicios.addEventListener("click", agregarAlCarrito);
 
-  mostrarCarrito();
 
-});
-document.addEventListener("click", (e) => {
-  if (!e.target.matches("#listaCarrito button")) return;
+   document.getElementById("vaciarCarrito").addEventListener("click", () => {
+    carrito = [];
+    guardarCarrito();
+    mostrarCarrito();
+  });
 
-  const index = e.target.dataset.index;
-  carrito.splice(index, 1);
-  guardarCarrito();
+  document.getElementById("finalizarCompra").addEventListener("click", () => {
+    if (carrito.length === 0) {
+      alert("El carrito está vacío");
+      return;
+    }
+
+    alert("Compra realizada con éxito 🎉");
+    carrito = [];
+    guardarCarrito();
+    mostrarCarrito();
+  });
+
   mostrarCarrito();
 });
