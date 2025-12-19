@@ -156,7 +156,7 @@ function mostrarCarrito() {
 // ============================
 
 document.addEventListener("DOMContentLoaded", () => {
-  fetch(".data/servicios.json")
+  fetch("Data/servicios.json")
     .then(res => res.json())
     .then(data => insertarServicios(data))
     .catch(err => console.error("Error cargando JSON:", err));
